@@ -1,0 +1,1089 @@
+.text {
+    font-style: bold;
+    color: rgb(255, 255, 255);
+    justify-content: left, baseline;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    margin-bottom: 1.5px;
+}
+
+/* ====== DARK THEME SUPPORT ====== */
+body.dark-theme {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+nav.dark-theme,
+.navbar.dark-theme {
+  background-color: #000000 !important;
+}
+
+.search-container.dark-theme {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.search-container.dark-theme input {
+  color: white;
+}
+
+.search-container.dark-theme input::placeholder {
+  color: #aaa;
+}
+
+.card.dark-theme {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+}
+
+/* Optional smooth theme transition */
+body,
+nav,
+.navbar,
+.search-container,
+.card {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav {
+  background-color: #000000 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2rem;
+  box-shadow: 0 2px 5px rgba(33, 32, 32, 0.2);
+  border-radius: 10px;
+  position: relative;
+  z-index: 100;
+  height: 110px;
+  width: 100%;
+  
+}
+
+
+    /*.logo {
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }*/
+
+    .nav-links {
+      display: flex;
+      gap: 5rem;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bold;
+      align-items: baseline;    
+      justify-content: center;
+      transition: right 0.3s, opacity 0.3s;
+      position: relative;
+      margin-bottom: 1.5px;
+      margin-right: -25px;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    
+  
+ .search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  padding: 10px 20px;
+  justify-content: baseline;
+  margin-left: auto; /* pushes to right */
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 8px 12px;
+  border-radius: 25px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 8px;
+  color: #333;
+}
+
+body.dark-theme .search-bar button {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    }
+
+    .nav-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  color: #ffffff !important;
+}
+
+body.dark-theme .nav-btn {
+  color: #fff !important;
+}
+
+  .nav-iconss {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    }
+
+  .nav-btnn {
+  background: none;
+  border: none;
+  color: rgb(228, 228, 228);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  } 
+
+  .nav-btnn:hover {
+  color: #ef0000;
+  } 
+
+
+  .nav-btn:hover {
+  color: #ffffff !important;
+}
+
+/* Filter icon color fix */
+#filter-toggle {
+  color: #ffffff !important;
+}
+body.dark-theme #filter-toggle {
+  color: #ffffff !important;
+}
+
+    .nav-links li {
+      position: relative;
+      justify-content: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1rem;
+      padding: 0.5rem;
+      transition: color 0.3s ease;
+        font-weight: bold;
+
+    }
+
+
+.nav-links a.active::after,
+.nav-links a:hover::after {
+  background: #fff !important; /* White underline */
+}
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .nav-links a::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #ffffff;
+      transition: width 0.5s;
+      margin-top: 4px;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem 0.5rem;
+      }
+      .nav-links {
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem 0.5rem;
+      }
+     
+      .nav-links {
+        display: none;
+      }
+      .nav-links.mobile {
+        display: flex;
+      }
+      .nav-links li {
+        width: 100%;
+      }
+      .nav-links a {
+        display: block;
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 0.7rem 0;
+      }
+      .search-bar {
+        width: 100%;
+        margin: 0 0 1rem 0;
+      }
+      .nav-icons {
+        gap: 10px;
+      }
+    }
+
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 40px;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+     align-items: center;
+      
+    }
+
+  
+    .card {
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 440px;
+  height: 650px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Ensure same box sizing in dark mode */
+.card.dark-theme {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+  
+
+
+/*image hover */
+
+
+    .image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+}
+
+.img-front {
+  opacity: 1;
+  z-index: 2;
+}
+
+.img-back {
+  opacity: 0;
+  z-index: 1;
+}
+
+.image-wrapper:hover .img-front {
+  opacity: 0;
+}
+
+.image-wrapper:hover .img-back {
+  opacity: 1;
+}
+
+/* */
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .card-description {
+      font-size: 14px;
+      color: #555;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+
+
+    
+
+    /* on card favourite and cart button */
+
+
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-nav {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  
+}
+
+.nav-btns {
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-btns:hover {
+  color: #e40d0d;
+}
+
+
+
+
+
+.filter-sidebar {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  padding: 30px 20px;
+  box-shadow: -2px 0 15px rgba(0,0,0,0.3);
+  transition: right 0.4s ease;
+  overflow-y: auto;
+}
+
+.filter-sidebar.show {
+  right: 0;
+}
+
+body.dark-theme .filter-sidebar {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.filter-group {
+  margin-bottom: 25px;
+}
+
+.filter-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.filter-group select,
+.filter-group input[type="range"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#price-value {
+  font-weight: bold;
+}
+
+.close-filter {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  border: none;
+  background: transparent;
+  color: #333;
+  cursor: pointer;
+}
+
+body.dark-theme .close-filter {
+  color: #f0f0f0;
+}
+
+
+/* Base Footer Styles */
+.footer {
+  background-color: #f8f8f8;
+  color: #333;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.social-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.social-links a {
+  color: #333;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+  color: #0077cc;
+  transform: scale(1.1);
+}
+
+/* Responsive Typography */
+@media (max-width: 600px) {
+  .footer {
+    font-size: 12px;
+  }
+
+  .social-links {
+    gap: 10px;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background-color: #000000;
+    color: #ccc;
+  }
+
+  .social-links a {
+    color: #ccc;
+  }
+
+  .social-links a:hover {
+    color: #00acee;
+  }
+}
+
+
+/* Position nav items horizontally */
+
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  background: #000000;
+  padding: 10px 20px;
+}
+
+.nav-links > li {
+  position: relative;
+}
+
+/* Style for top-level links */
+
+
+.nav-links > li > a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+   pointer-events: auto;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 120px;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+   pointer-events: auto;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+/* Dropdown menu dark mode support */
+body.dark-theme .dropdown-menu {
+  background-color: #181818 !important;
+  color: #fff !important;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+}
+
+body.dark-theme .dropdown-menu li a {
+  color: #fff !important;
+}
+
+body.dark-theme .dropdown-menu li a:hover {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+/* Light mode dropdown menu styles */
+body:not(.dark-theme) .dropdown-menu {
+  background-color: #fff !important;
+  color: #111 !important;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+body:not(.dark-theme) .dropdown-menu li a {
+  color: #111 !important;
+}
+
+/* Fix dropdown menu link hover underline for light mode */
+body:not(.dark-theme) .dropdown-menu li a {
+  position: relative;
+}
+
+body:not(.dark-theme) .dropdown-menu li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000; /* Black underline for visibility */
+  transition: width 0.3s;
+  margin-top: 4px;
+}
+
+body:not(.dark-theme) .dropdown-menu li a:hover::after {
+  width: 100%;
+}
+
+/* Optional: keep underline white in dark mode */
+body.dark-theme .dropdown-menu li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff; /* White underline for dark mode */
+  transition: width 0.3s;
+  margin-top: 4px;
+}
+
+body.dark-theme .dropdown-menu li a:hover::after {
+  width: 100%;
+}
+
+/* Show dropdown on hover or click */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+/* Active link underline & color */
+.nav-link {
+  color: white;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #000000;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #000000;
+  left: 0;
+  bottom: 0;
+}
+
+.homepage {
+  position: relative;
+  width: 100%;
+  height: 90vh; /* Covers most of the screen */
+  overflow: hidden;
+}
+
+.homepage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.homepage1 img {
+  width: 1820px;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+  align-items: center;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.banner-text h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.banner-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 12px 24px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+}
+
+
+
+
+.banner-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* for dark and light theme in react js */
+
+/* Base (light) theme styles */
+body.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark theme overrides */
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-theme .navbar,
+body.dark-theme .card,
+body.dark-theme .hero-banner,
+body.dark-theme .card-content,
+body.dark-theme .nav-btns {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+  border: none;
+}
+
+body.dark-theme .category-section{
+  background-color: #121212
+  ;
+}
+
+body.dark-theme input,
+body.dark-theme button {
+  background-color: #373535;
+  color: #fff5f5;
+ border: none;
+}
+
+/* Base styling for nav icons */
+.nav-btn {
+  background: none !important;
+  border: none !important;
+  padding: 0 10px;
+  font-size: 22px;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+/* Light theme icon color (optional) */
+.nav-btn {
+  color: #333;
+}
+
+/* Dark theme override */
+.dark .nav-btns {
+  color: #fff !important;
+border: none !important;
+}
+
+.dark body {
+  background-color: #121212;
+  color: white;
+  border: none !important;
+}
+.dark .category-section{
+  background-color: #000;
+}
+body.dark-theme .search-bar {
+  background-color: #000 !important;
+  border: 2px solid #444 !important;
+  box-sizing: border-box;
+}
+
+
+body.dark-theme .search-bar input {
+  background: transparent;
+  color: #fff;
+}
+body.dark-theme .search-bar input::placeholder {
+  color: #aaa;
+}
+body.dark-theme .search-bar button {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+
+
+
+
+/*------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #24292e;
+  padding: 10px 20px;
+  color: rgb(255, 253, 253);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-btn:hover {
+  color: #e40d0d;
+}
+
+
+
+
+.cart-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 30px;
+  color: #222;
+}
+
+body.dark-mode .cart-heading {
+  color: #f0f0f0;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px 10%;
+}
+
+.cart-item {
+  display: flex;
+  gap: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 24px;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease;
+}
+
+.cart-item:hover {
+  transform: scale(1.015);
+}
+
+.cart-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.item-info {
+  flex-grow: 1;
+}
+
+.item-info h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.item-info p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.item-info input[type="number"] {
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+  font-size: 1rem;
+  width: 60px;
+  outline: none;
+}
+
+.cart-total {
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px 15% 60px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.cart-total p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.cart-total button {
+  padding: 12px 36px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #000000, #434343);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-total button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #434343, #000000);
+}
+
+/* === DARK MODE STYLES === */
+
+body.dark-theme {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Navbar */
+.navbar.dark-theme,
+nav.dark-theme {
+  background-color: #1e1e1e;
+}
+
+.nav-btn.dark-theme {
+  color: #f0f0f0;
+}
+
+.nav-btn.dark-theme:hover {
+  color: #e40d0d;
+  transform: scale(1.2);
+}
+
+/* Search Bar */
+.search-container.dark-theme {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.search-container.dark-theme input {
+  color: white;
+}
+
+.search-container.dark-theme input::placeholder {
+  color: #aaa;
+}
+
+/* Cart Items */
+.cart-item.dark-theme {
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+  border: 1px solid #333;
+}
+
+.item-info.dark-theme p {
+  color: #ccc;
+}
+
+/* Cart Total Section */
+.cart-total.dark-theme {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border-top: 1px solid #444;
+}
+
+.cart-total.dark-theme button {
+  background-color: #333;
+  color: white;
+}
+
+.cart-total.dark-theme button:hover {
+  background-color: #555;
+}
+
+/* Fix cart-item and cart-total visibility in dark mode */
+body.dark-theme .cart-item {
+  background: rgba(30, 30, 30, 0.85) !important;
+  color: #fff !important;
+  border: 1px solid #333 !important;
+}
+
+body.dark-theme .cart-item img {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+body.dark-theme .item-info h3,
+body.dark-theme .item-info p {
+  color: #fff !important;
+}
+
+body.dark-theme .cart-total {
+  background: rgba(30, 30, 30, 0.95) !important;
+  color: #fff !important;
+  border-top: 1px solid #444 !important;
+}
+
+body.dark-theme .cart-total p {
+  color: #fff !important;
+}
+
+body.dark-theme .cart-heading {
+  color: #fff !important;
+}
+
+
+.wishlist-heading{
+  text-align: center;
+  padding-bottom: 1%;
+    padding-top: 1%;
+    font-size:  xx-large;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+
+.empty-text{
+ text-align: center;
+    font-size:  xx-large;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.clear-btn{
+  text-align: center;
+  font-size: large;
+  color: #000;
+ border-radius: 2px;
+ justify-content: center;
+}
+
+
+
